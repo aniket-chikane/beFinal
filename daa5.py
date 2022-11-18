@@ -30,10 +30,13 @@ def solveNQUtil(board, col):
 			board[i][col] = 0
 	return False
 def solveNQ():
-	board = [ [0, 0, 0, 0],
-			[0, 0, 0, 0],
-			[0, 0, 0, 0],
-			[0, 0, 0, 0] ]
+	board =[]
+	for i in range(N):
+		ar=[]
+		for k in range(N):
+			ar.append(0)
+		board.append(ar)
+
 	if solveNQUtil(board, 0) == False:
 		print ("Solution does not exist")
 		return False
